@@ -76,6 +76,8 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     return false;
   }
   
+  list = document.querySelectorAll("#faultyItems li");
+
   // Update the `pilotStatus` and `copilotStatus` li elements.
   document.getElementById("pilotStatus").innerHTML = `Pilot ${pilotName} is ready for launch`;
   document.getElementById("copilotStatus").innerHTML = `Co-pilot ${copilotName} is ready for launch`;
