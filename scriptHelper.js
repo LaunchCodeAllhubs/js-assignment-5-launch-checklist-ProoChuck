@@ -85,25 +85,25 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
   // Check the fuel level and cargo mass.
   if (Number(fuelLevel) < 10000) {
     // The fuel level is too low.
-    document.getElementById("faultyItems").style.visibility = "hidden";
+    document.getElementById("faultyItems").style.visibility = "visible";
     document.getElementById("fuelStatus").innerHTML = "Fuel level too low for launch";
     document.getElementById("launchStatus").innerHTML = "Shuttle Not Ready for Launch";
     document.getElementById("launchStatus").style.color = "#C7254E";
   } else {
     // The fuel level is high enough.
-    document.getElementById("faultyItems").style.visibility = "visible";
+    document.getElementById("faultyItems").style.visibility = "hidden";
     document.getElementById("fuelStatus").innerHTML = "Fuel level high enough for launch";
   }
 
   if (Number(cargoMass) > 10000) {
     // The cargo mass is too high.
-    document.getElementById("faultyItems").style.visibility = "hidden";
+    document.getElementById("faultyItems").style.visibility = "visible";
     document.getElementById("cargoStatus").innerHTML = "Cargo mass too heavy for launch";
     document.getElementById("launchStatus").innerHTML = "Shuttle Not Ready for Launch";
     document.getElementById("launchStatus").style.color = "#C7254E";
   } else {
     // The cargo mass is low enough.
-    document.getElementById("faultyItems").style.visibility = "visible";
+    document.getElementById("faultyItems").style.visibility = "hidden";
     document.getElementById("cargoStatus").innerHTML = "Cargo mass low enough for launch";
   }
 
