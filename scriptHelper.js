@@ -91,7 +91,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     document.getElementById("launchStatus").style.color = "#C7254E";
   } else {
     // The fuel level is high enough.
-    document.getElementById("faultyItems").style.visibility = "hidden";
+    document.getElementById("faultyItems").style.visibility = "visible";
     document.getElementById("fuelStatus").innerHTML = "Fuel level high enough for launch";
   }
 
@@ -103,7 +103,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     document.getElementById("launchStatus").style.color = "#C7254E";
   } else {
     // The cargo mass is low enough.
-    document.getElementById("faultyItems").style.visibility = "hidden";
+    document.getElementById("faultyItems").style.visibility = "visible";
     document.getElementById("cargoStatus").innerHTML = "Cargo mass low enough for launch";
   }
 
