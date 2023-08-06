@@ -105,11 +105,6 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     document.getElementById("cargoStatus").innerHTML = "Cargo mass low enough for launch";
   }
 
-     //Update the list of shuttle requirements.
-  list.forEach(function(item) {
-    document.getElementById(item);
-  });
-
   // If the shuttle is ready to launch, change the text of launchStatus to a particular shade of green, #419F6A or rgb(65, 159, 106), and display "Shuttle is ready for launch".
   if (Number(fuelLevel) >= 10000 && Number(cargoMass) <= 10000) {
     document.getElementById("launchStatus").innerHTML = "Shuttle is Ready for Launch";
