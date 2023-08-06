@@ -76,8 +76,6 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     return false;
   }
   
-  list = document.querySelectorAll("#faultyItems li");
-
   // Update the `pilotStatus` and `copilotStatus` li elements.
   document.getElementById("pilotStatus").innerHTML = `Pilot ${pilotName} is ready for launch`;
   document.getElementById("copilotStatus").innerHTML = `Co-pilot ${copilotName} is ready for launch`;
@@ -91,7 +89,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     document.getElementById("launchStatus").style.color = "#C7254E";
   } else {
     // The fuel level is high enough.
-    document.getElementById("faultyItems").style.visibility = "hidden";
+    document.getElementById("faultyItems").style.visibility = "visible";
     document.getElementById("fuelStatus").innerHTML = "Fuel level high enough for launch";
   }
 
@@ -103,14 +101,14 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     document.getElementById("launchStatus").style.color = "#C7254E";
   } else {
     // The cargo mass is low enough.
-    document.getElementById("faultyItems").style.visibility = "hidden";
+    document.getElementById("faultyItems").style.visibility = "visible";
     document.getElementById("cargoStatus").innerHTML = "Cargo mass low enough for launch";
   }
 
-    // Update the list of shuttle requirements.
-  //list.forEach(function(item) {
-  //  document.getElementById(item).innerHTML = "Ready";
-  //});
+     //Update the list of shuttle requirements.
+  list.forEach(function(item) {
+    document.getElementById(item);
+  });
 
   // If the shuttle is ready to launch, change the text of launchStatus to a particular shade of green, #419F6A or rgb(65, 159, 106), and display "Shuttle is ready for launch".
   if (Number(fuelLevel) >= 10000 && Number(cargoMass) <= 10000) {
